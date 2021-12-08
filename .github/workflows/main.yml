@@ -1,0 +1,20 @@
+name: Check for type updates
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  - name: Copy from github
+    uses: andstor/copycat-action@v3
+    with:
+      personal_token: ${{ secrets.PERSONAL_TOKEN }}
+      src_path: ./Types
+      src_owner: abUwUser
+      src_repo_name: BDPlugins
+      dst_path: /
+      dst_owner: Cobular
+      dst_repo_name: BDTypes
+  
+  
