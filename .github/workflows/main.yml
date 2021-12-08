@@ -14,7 +14,7 @@ jobs:
         uses: Cobular/copycat-anywhere-action@v4.0.0
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          src_path: Types
+          src_path: types
           src_owner: abUwUser
           src_repo_name: BDPlugins
           dst_path: /
