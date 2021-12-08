@@ -6,15 +6,19 @@ on:
     - cron: "0 * * * *"
 
 jobs:
-  - name: Copy from github
-    uses: andstor/copycat-action@v3
-    with:
-      personal_token: ${{ secrets.PERSONAL_TOKEN }}
-      src_path: ./Types
-      src_owner: abUwUser
-      src_repo_name: BDPlugins
-      dst_path: /
-      dst_owner: Cobular
-      dst_repo_name: BDTypes
+  check_for_update:
+    name: Copy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copy from github
+        uses: Cobular/copycat-action
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          src_path: ./Types
+          src_owner: abUwUser
+          src_repo_name: BDPlugins
+          dst_path: /
+          dst_owner: Cobular
+          dst_repo_name: BDTypes
   
   
