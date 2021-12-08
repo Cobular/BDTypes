@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Copy from github
-        uses: Cobular/copycat-action
+        uses: Cobular/copycat-action@latest
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           src_path: ./Types
