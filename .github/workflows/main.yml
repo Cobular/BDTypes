@@ -10,8 +10,8 @@ jobs:
     name: Copy
     runs-on: ubuntu-latest
     steps:
-      - name: Copy from github
-        uses: Cobular/copycat-action@latest
+      - name: Copy Anywhere Action
+        uses: Cobular/copycat-anywhere-action@v4.0.0
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           src_path: ./Types
